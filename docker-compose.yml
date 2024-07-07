@@ -6,8 +6,6 @@ services:
     command: gunicorn simple_django_project.wsgi:application --bind 0.0.0.0:8000
     networks:
       - nginx_network
-    expose:
-      - 8000
 
   nginx_django_site1:
     image: nginx:latest
